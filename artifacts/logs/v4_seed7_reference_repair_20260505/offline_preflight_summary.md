@@ -1,0 +1,53 @@
+# V4 Seed7 Reference Repair Offline Preflight Summary
+
+- run_name: `v4_seed7_reference_repair_20260505`
+- lane: `repair`
+- action: `v4_seed7_reference_preflight_repair`
+- live_run_launched: `false`
+- allow_preflight_failure_used: `false`
+- pair_preflight_clean: `true`
+- hash_written: `true`
+- freeze_status: `offline_pair_hash_written_live_card_pending`
+- overall_status: `passed_offline_preflight`
+- next_action: `prepare_v4_seed7_live_run_card_review`
+
+## Reference Pack
+
+- task_file: `logs/v4_seed7_reference_repair_20260505/attempt_01/tasks_verify_necessary_reference_seed7_repair_attempt_01.jsonl`
+- sha256: `f120c03abaa18ace347466d39b7666cc2850535d424d07bf3fb7572e86a8e10e`
+- preflight_summary: `logs/v4_seed7_reference_repair_20260505/attempt_01/task_pressure_preflight_summary.json`
+- tool_profile_counts: `verify_necessary=100`
+- tool_subtype_counts: `verify_first=40`, `scan_then_verify=60`
+- combined_preflight_passes: `true`
+- task_pressure_preflight_passes: `true`
+- step_local_preflight_passes: `true`
+- bs_positive_ask_gain_rate: `0.8000`
+- bs_direct_choose_optimal_rate: `0.2000`
+- ask_gain_margin_p25: `0.92`
+- repair_attempt_index: `1`
+- selection_policy: `minimal_preflight_margin_fix`
+- candidate_pool_count: `200`
+
+## Stress Pack
+
+- task_file: `logs/v4_seed7_reference_repair_20260505/stress_pack/tasks_verify_necessary_aggressive_stress_v4_100_seed7.jsonl`
+- sha256: `b476cb1dc79e59aac84710cfae9428be791c0a652e8831fe1ef34ff6161b9da4`
+- preflight_summary: `logs/v4_seed7_reference_repair_20260505/stress_pack/task_pressure_preflight_summary.json`
+- tool_profile_counts: `verify_necessary_aggressive_stress_v4=100`
+- tool_subtype_counts: `deceptive_scan=60`, `scan_then_verify=20`, `verify_first=20`
+- combined_preflight_passes: `true`
+- task_pressure_preflight_passes: `true`
+- step_local_preflight_passes: `true`
+- v4_preflight_passes: `true`
+- bs_positive_ask_gain_rate: `0.8333`
+- bs_direct_choose_optimal_rate: `0.1667`
+- ask_gain_margin_p25: `0.86`
+- family_conflict_positive_rate: `0.7667`
+- deceptive_scan_share: `0.60`
+- scan_only_unsafe_rate: `0.6667`
+- wrong_tool_opportunity_proxy_rate: `0.7667`
+- verify_rescue_rate_after_scan: `0.50`
+
+## Stop Rule
+
+The v4 seed7 offline pair is now preflight-clean, but it is not live evidence. No `eval.run_suite` run was launched, no receipt was generated, no diagnosis was generated, and no battery summary was generated. The next allowed action is a separate live-run pre-run card review.

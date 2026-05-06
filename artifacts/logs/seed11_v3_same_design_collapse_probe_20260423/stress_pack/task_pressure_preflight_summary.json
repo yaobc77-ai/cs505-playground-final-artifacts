@@ -1,0 +1,85 @@
+{
+  "task_count": 100,
+  "pass_count": 100,
+  "failure_count": 0,
+  "tool_profile_counts": {
+    "verify_necessary_aggressive_stress_v3": 100
+  },
+  "tool_subtype_counts": {
+    "deceptive_scan": 50,
+    "scan_then_verify": 25,
+    "verify_first": 25
+  },
+  "initial_family_counts": {
+    "scan": 75,
+    "verify": 25
+  },
+  "verify_better": 25,
+  "scan_better": 75,
+  "qualifying_scan_task_count": 25,
+  "initial_positive_canonical_ask_gain_count": 100,
+  "initial_positive_scan_gain_count": 75,
+  "initial_positive_verify_gain_count": 100,
+  "initial_direct_choose_optimal_count": 0,
+  "initial_direct_choose_optimal_rate": 0.0,
+  "post_scan_positive_verify_gain_task_count": 25,
+  "task_pressure_preflight_passes": true,
+  "step_local_proxy_state_count": 1200,
+  "bs_positive_ask_gain_count": 1000,
+  "bs_positive_ask_gain_rate": 0.8333,
+  "bs_direct_choose_optimal_count": 200,
+  "bs_direct_choose_optimal_rate": 0.1667,
+  "ask_gain_margin_p25": 0.86,
+  "family_conflict_delta": 0.2,
+  "family_conflict_delta_used": 0.2,
+  "family_conflict_proxy_state_count": 1200,
+  "family_conflict_positive_count": 925,
+  "family_conflict_positive_rate": 0.7708,
+  "wrong_tool_opportunity_proxy_count": 925,
+  "wrong_tool_opportunity_proxy_rate": 0.7708,
+  "scan_family_proxy_state_count": 450,
+  "scan_only_unsafe_count": 300,
+  "scan_only_unsafe_rate": 0.6667,
+  "verify_rescue_after_scan_count": 225,
+  "verify_rescue_rate_after_scan": 0.5,
+  "deceptive_scan_count": 50,
+  "deceptive_scan_share": 0.5,
+  "step_local_preflight_passes": true,
+  "v3_preflight_passes": true,
+  "combined_preflight_passes": true,
+  "task_pressure_preflight_notes": [
+    "positive canonical ask gain must appear at least once",
+    "template direct choose cannot remain optimal for nearly all generated tasks",
+    "at least one ask family must beat template direct choose in some initial states"
+  ],
+  "step_local_preflight_notes": [
+    "one-ask successor proxy states are offline-generated approximations, not live blocked-step replays",
+    "direct choose is evaluated against the template-choose proxy inside those one-ask successor states",
+    "bs_positive_ask_gain_rate must be >= 0.80",
+    "bs_direct_choose_optimal_rate must be <= 0.20",
+    "ask_gain_margin_p25 must be strictly positive"
+  ],
+  "stress_metric_notes": [
+    "family_conflict_positive_rate is measured on proxy states where both scan and verify remain available",
+    "delta=0.20 is the minimum substantive score gap for family conflict, unsafe scan-only, and verify rescue",
+    "proxy scores use the cumulative reward scale of canonical [ASK_x, CHOOSE_BEST] rollouts under evaluate_candidate()",
+    "verify_rescue_rate_after_scan is reported only on scan_then_verify and deceptive_scan proxy states reached after an initial scan action"
+  ],
+  "report_only_stress_metrics": [
+    "family_conflict_positive_rate",
+    "wrong_tool_opportunity_proxy_rate",
+    "verify_rescue_rate_after_scan"
+  ],
+  "v3_preflight_notes": [
+    "family_conflict_delta_used must equal 0.20",
+    "family_conflict_positive_rate must be > 0",
+    "deceptive_scan_share must be >= 0.50",
+    "scan_only_unsafe_rate must be >= 0.30"
+  ],
+  "failure_details": [],
+  "constraint_relaxations": [
+    "verify_first does not enforce `scan-best > 0` because any positive scan would dominate a positive verify under the current binary choose reward and negative ask cost.",
+    "scan_then_verify accepts a single qualifying scan action because requiring two qualifying scans conflicts with post-scan verify superiority under the current binary choose reward and negative ask cost.",
+    "ask-vs-choose comparisons are reported for context but not used as hard acceptance gates because exhaustive CHOOSE_A/B/C evaluation is oracle-complete in this environment."
+  ]
+}

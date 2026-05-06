@@ -1,0 +1,76 @@
+{
+  "delta": 0.1,
+  "stress_pack": {
+    "run_root": "C:\\Users\\yaobc\\Documents\\Playground\\logs\\seed11_v3_same_design_collapse_probe_20260423\\stress_pack",
+    "run_name": "stress_pack",
+    "receipt_ok": true,
+    "receipt": {
+      "run_completed": "true",
+      "jsonl_integrity": "pass",
+      "task_id_pairing": "pass",
+      "safe_for_interpretation": "true"
+    },
+    "modes": {
+      "full": {
+        "tool_choice_step_count": 57.0,
+        "oracle_tool_choice_step_count": 156.0,
+        "realized_tool_choice_coverage": 0.36538461538461536,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.6346,
+        "selected_vs_oracle_family_mismatch_rate": 0.8397,
+        "tool_family_mismatch_rate_vs_oracle": 0.2051,
+        "verify_usage_rate": 0.3057,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 0.74,
+        "blocked_step_count": 100.0
+      },
+      "selector_penalty": {
+        "tool_choice_step_count": 29.0,
+        "oracle_tool_choice_step_count": 129.0,
+        "realized_tool_choice_coverage": 0.2248062015503876,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.7752,
+        "selected_vs_oracle_family_mismatch_rate": 0.9225,
+        "tool_family_mismatch_rate_vs_oracle": 0.1473,
+        "verify_usage_rate": 0.1938,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 0.75,
+        "blocked_step_count": 100.0
+      },
+      "voi_memory_v1": {
+        "tool_choice_step_count": 83.0,
+        "oracle_tool_choice_step_count": 183.0,
+        "realized_tool_choice_coverage": 0.453551912568306,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.5464,
+        "selected_vs_oracle_family_mismatch_rate": 0.5464,
+        "tool_family_mismatch_rate_vs_oracle": 0.0,
+        "verify_usage_rate": 0.0984,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 1.0,
+        "blocked_step_count": 100.0
+      }
+    },
+    "blocked": {
+      "task_pressure": 100,
+      "surfaced_ask_deficit": 0,
+      "hard_cutoff_candidate": 0,
+      "blocked_step_count": 100,
+      "route_target": "task_pressure"
+    }
+  },
+  "trigger_good": [
+    {
+      "metric": "selected_vs_oracle_family_mismatch_rate",
+      "direction": "voi_memory_v1_lower_than_full",
+      "full_value": 0.8397,
+      "voi_memory_v1_value": 0.5464,
+      "delta_value": 0.2933
+    }
+  ],
+  "trigger_good_count": 1,
+  "negative_inversion": [],
+  "negative_inversion_count": 0,
+  "pure_task_pressure": true,
+  "separation_reopened": true,
+  "route": "B",
+  "verdict": "separation_reopened",
+  "next_action": "prepare_seed11_reference_confirmation_review"
+}

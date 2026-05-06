@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+.env
+.venv/
+env/
+*.log
+*.aux
+*.blg
+*.out
+*.xdv
+tests/_tmp_runtime/

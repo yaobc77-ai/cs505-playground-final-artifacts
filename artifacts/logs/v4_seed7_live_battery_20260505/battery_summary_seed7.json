@@ -1,0 +1,153 @@
+{
+  "delta": 0.1,
+  "reference": {
+    "run_root": "C:\\Users\\yaobc\\Documents\\Playground\\logs\\v4_seed7_live_battery_20260505\\reference_pack",
+    "run_name": "reference_pack",
+    "receipt_ok": true,
+    "receipt": {
+      "run_completed": "true",
+      "jsonl_integrity": "pass",
+      "task_id_pairing": "pass",
+      "safe_for_interpretation": "true"
+    },
+    "modes": {
+      "full": {
+        "tool_choice_step_count": 45.0,
+        "oracle_tool_choice_step_count": 145.0,
+        "realized_tool_choice_coverage": 0.3103448275862069,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.6897,
+        "selected_vs_oracle_family_mismatch_rate": 0.6897,
+        "tool_family_mismatch_rate_vs_oracle": 0.0,
+        "verify_usage_rate": 0.1034,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 0.82,
+        "blocked_step_count": 100.0
+      },
+      "selector_penalty": {
+        "tool_choice_step_count": 10.0,
+        "oracle_tool_choice_step_count": 110.0,
+        "realized_tool_choice_coverage": 0.09090909090909091,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.9091,
+        "selected_vs_oracle_family_mismatch_rate": 0.9091,
+        "tool_family_mismatch_rate_vs_oracle": 0.0,
+        "verify_usage_rate": 0.0364,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 0.91,
+        "blocked_step_count": 100.0
+      },
+      "voi_memory_v1": {
+        "tool_choice_step_count": 89.0,
+        "oracle_tool_choice_step_count": 189.0,
+        "realized_tool_choice_coverage": 0.4708994708994709,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.5291,
+        "selected_vs_oracle_family_mismatch_rate": 0.5291,
+        "tool_family_mismatch_rate_vs_oracle": 0.0,
+        "verify_usage_rate": 0.2063,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 1.0,
+        "blocked_step_count": 100.0
+      }
+    },
+    "blocked": {
+      "task_pressure": 100,
+      "surfaced_ask_deficit": 0,
+      "hard_cutoff_candidate": 0,
+      "blocked_step_count": 100,
+      "route_target": "task_pressure"
+    }
+  },
+  "stress": {
+    "run_root": "C:\\Users\\yaobc\\Documents\\Playground\\logs\\v4_seed7_live_battery_20260505\\stress_pack",
+    "run_name": "stress_pack",
+    "receipt_ok": true,
+    "receipt": {
+      "run_completed": "true",
+      "jsonl_integrity": "pass",
+      "task_id_pairing": "pass",
+      "safe_for_interpretation": "true"
+    },
+    "modes": {
+      "full": {
+        "tool_choice_step_count": 51.0,
+        "oracle_tool_choice_step_count": 151.0,
+        "realized_tool_choice_coverage": 0.33774834437086093,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.6623,
+        "selected_vs_oracle_family_mismatch_rate": 0.9272,
+        "tool_family_mismatch_rate_vs_oracle": 0.2649,
+        "verify_usage_rate": 0.298,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 0.81,
+        "blocked_step_count": 100.0
+      },
+      "selector_penalty": {
+        "tool_choice_step_count": 21.0,
+        "oracle_tool_choice_step_count": 121.0,
+        "realized_tool_choice_coverage": 0.17355371900826447,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.8264,
+        "selected_vs_oracle_family_mismatch_rate": 0.9752,
+        "tool_family_mismatch_rate_vs_oracle": 0.1488,
+        "verify_usage_rate": 0.1736,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 0.88,
+        "blocked_step_count": 100.0
+      },
+      "voi_memory_v1": {
+        "tool_choice_step_count": 86.0,
+        "oracle_tool_choice_step_count": 186.0,
+        "realized_tool_choice_coverage": 0.46236559139784944,
+        "choose_swallow_rate_given_oracle_tool_choice": 0.5376,
+        "selected_vs_oracle_family_mismatch_rate": 0.5376,
+        "tool_family_mismatch_rate_vs_oracle": 0.0,
+        "verify_usage_rate": 0.086,
+        "wrong_tool_rate": 0.0,
+        "success_rate": 1.0,
+        "blocked_step_count": 100.0
+      }
+    },
+    "blocked": {
+      "task_pressure": 100,
+      "surfaced_ask_deficit": 0,
+      "hard_cutoff_candidate": 0,
+      "blocked_step_count": 100,
+      "route_target": "task_pressure"
+    }
+  },
+  "trigger_good": [],
+  "trigger_good_primary_count": 0,
+  "trigger_good_primary_mode": "voi_memory_v1",
+  "sanity_check_deltas": [
+    {
+      "mode": "full",
+      "metric": "verify_usage_rate",
+      "direction": "higher_than_reference",
+      "reference_value": 0.1034,
+      "stress_value": 0.298,
+      "improvement": 0.1946
+    },
+    {
+      "mode": "selector_penalty",
+      "metric": "verify_usage_rate",
+      "direction": "higher_than_reference",
+      "reference_value": 0.0364,
+      "stress_value": 0.1736,
+      "improvement": 0.1372
+    }
+  ],
+  "wrong_tool_surface_exposed": [
+    {
+      "mode": "full",
+      "reference_value": 0.0,
+      "stress_value": 0.2649
+    },
+    {
+      "mode": "selector_penalty",
+      "reference_value": 0.0,
+      "stress_value": 0.1488
+    }
+  ],
+  "negative_inversion": [],
+  "negative_inversion_count": 0,
+  "route": "B",
+  "seed11_trigger": false,
+  "next_action": "v4_task_pressure_insufficient_or_stable_negative_review"
+}

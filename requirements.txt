@@ -1,0 +1,2 @@
+# No third-party dependencies are required for the MVP.
+# Python 3.12+ is sufficient.

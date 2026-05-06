@@ -1,0 +1,35 @@
+{
+  "delta": 0.1,
+  "seed7_battery_summary_path": "C:\\Users\\yaobc\\Documents\\Playground\\logs\\dual_battery_v3_aggressive_stress_seed7_20260423\\battery_summary_seed7.json",
+  "seed11_stress_summary_path": "C:\\Users\\yaobc\\Documents\\Playground\\logs\\seed11_v3_same_design_collapse_probe_20260423\\battery_summary_seed11.json",
+  "seed11_receipt_ok": true,
+  "seed11_choose_swallow_collapse_shape_persists": true,
+  "seed11_choose_swallow_delta_vs_seed7_stress": 0.0464,
+  "seed11_pure_task_pressure": true,
+  "seed11_negative_inversion_count": 0,
+  "seed11_separation_reopened": true,
+  "seed11_trigger_good_count": 1,
+  "route": "B",
+  "verdict": "seed11_reopened_separation",
+  "next_action": "prepare_seed11_reference_confirmation_review",
+  "seed7_stress_voi_memory_v1": {
+    "tool_choice_step_count": 100.0,
+    "oracle_tool_choice_step_count": 200.0,
+    "realized_tool_choice_coverage": 0.5,
+    "choose_swallow_rate_given_oracle_tool_choice": 0.5,
+    "selected_vs_oracle_family_mismatch_rate": 0.5,
+    "tool_family_mismatch_rate_vs_oracle": 0.0,
+    "verify_usage_rate": 0.125,
+    "wrong_tool_rate": 0.0
+  },
+  "seed11_stress_voi_memory_v1": {
+    "tool_choice_step_count": 83.0,
+    "oracle_tool_choice_step_count": 183.0,
+    "realized_tool_choice_coverage": 0.453551912568306,
+    "choose_swallow_rate_given_oracle_tool_choice": 0.5464,
+    "selected_vs_oracle_family_mismatch_rate": 0.5464,
+    "tool_family_mismatch_rate_vs_oracle": 0.0,
+    "verify_usage_rate": 0.0984,
+    "wrong_tool_rate": 0.0
+  }
+}
