@@ -27,7 +27,7 @@ Tool-using language agents must often decide whether to act immediately or pay f
 
 \section{Introduction}
 
-Language agents are increasingly evaluated as systems that reason, call tools, receive observations, and revise behavior over time \citep{yao2023react,shinn2023reflexion,liu2024agentbench,jimenez2024swebench}. A central decision in these systems is epistemic: should the agent act now, or should it ask for more information? In a multi-tool setting, there is a second layer. If asking is useful, which information source should be queried?
+Language agents are increasingly evaluated as systems that reason, call tools, receive observations, and revise behavior over time \citep{karpas2022mrkl,mialon2023augmented,yao2023react,schick2023toolformer,qin2024toolllm,shinn2023reflexion,liu2024agentbench,jimenez2024swebench}. A central decision in these systems is epistemic: should the agent act now, or should it ask for more information? In a multi-tool setting, there is a second layer. If asking is useful, which information source should be queried?
 
 The midway report narrowed the original broad proposal into a controlled diagnostic problem. It asked whether a family-scoped memory variant, \texttt{voi\_memory\_v1}, could make a meaningful which-tool problem observable in a small, cloneable text environment. The 10-task smoke batch exposed nonzero tool-choice opportunity, but tool precision stayed at ceiling and blocked \texttt{voi\_memory\_v1} rows still pointed to task pressure. At that point, the evidence supported whether-to-ask progress only.
 
@@ -93,7 +93,7 @@ Blocked-step routing & Diagnosis of blocked \texttt{voi\_memory\_v1} ask opportu
 
 \section{Experiments}
 
-All experiments use internally generated tasks rather than a public benchmark. This limits external realism but makes attribution tight, unlike broader agent suites such as AgentBench and SWE-bench \citep{liu2024agentbench,jimenez2024swebench}. Each live battery compares \texttt{full} (baseline), \texttt{selector\_penalty} (a non-memory anti-ask variant), and \texttt{voi\_memory\_v1} (family-scoped lessons). A battery is interpreted only if both packs pass four receipt gates: run completion, JSONL integrity, task-id pairing, and safety for interpretation.
+All experiments use internally generated tasks rather than a public benchmark. This limits external realism but makes attribution tight, unlike broad evaluation suites that emphasize coverage across many tasks or behavioral capabilities \citep{ribeiro2020checklist,bowman2021benchmarking,liang2023helm,srivastava2023bigbench,liu2024agentbench,jimenez2024swebench}. Each live battery compares \texttt{full} (baseline), \texttt{selector\_penalty} (a non-memory anti-ask variant), and \texttt{voi\_memory\_v1} (family-scoped lessons). A battery is interpreted only if both packs pass four receipt gates: run completion, JSONL integrity, task-id pairing, and safety for interpretation.
 
 Table~\ref{tab:ladder} shows the post-midway ladder. The midway report ended at a 10-task smoke batch. The final project adds seed-7 v3 dual-battery evidence, a seed-11 stress-only probe, a repaired seed-11 reference confirmation battery, v4 offline repair, and a v4 seed-7 receipt-safe live battery.
 
@@ -182,7 +182,7 @@ The blocked-step audits route both final packs to \texttt{task\_pressure}: 100 o
 
 \section{Discussion and Limitations}
 
-The project is small, and the negative result is local. Its strength is diagnostic control rather than headline performance. The system records when an offline pack is not eligible, when a live run is safe to interpret, and when a stress-only signal is not enough. This style follows recent concerns that evaluation choices can change conclusions about system quality \citep{levtsov2025confidence}.
+The project is small, and the negative result is local. Its strength is diagnostic control rather than headline performance. The system records when an offline pack is not eligible, when a live run is safe to interpret, and when a stress-only signal is not enough. This emphasis on evaluation protocol follows work arguing that benchmark design, behavioral tests, and score stability can change conclusions about system quality \citep{ribeiro2020checklist,bowman2021benchmarking,liang2023helm,levtsov2025confidence}.
 
 The main limitation is external validity. ToyTextMDP is synthetic and far smaller than open-ended code or web environments \citep{chen2021codex,jimenez2024swebench}. Its advantage is exact replay and attribution, but the same control can make the state space pathological. For example, the v4 verify-usage drop could mean that \texttt{voi\_memory\_v1} failed, or that this micro-MDP created pressure where verify and scan are formally distinguishable but not semantically rich enough for a language-memory cue to matter. The safe interpretation is therefore local: receipt-safe negative evidence under this task ecology, not a universal claim that VOI memory cannot help tool choice.
 
