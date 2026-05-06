@@ -161,7 +161,7 @@ def pipeline_flowchart():
     arrow(draw, (750, 1444), (750, 1555), fill=ROUTE, width=5)
     arrow(draw, (1245, 1444), (1245, 1555), fill=ROUTE, width=5)
 
-    footer(draw, "Final v4 seed7 follows Route B: trigger_good = [], negative_inversion = [], blocked steps = task_pressure.")
+    footer(draw, "Final v4 seed7 follows Route B: no trigger-good cases; no negative inversion; blocked steps route to task pressure.")
     img.save(FIG_DIR / "pipeline_flowchart.png")
 
 
@@ -230,7 +230,7 @@ def metrics_bars():
     draw.rounded_rectangle((1330, 240, 1700, 675), radius=20, fill="#F7F8FA", outline=MUTED, width=3)
     wrapped(
         draw,
-        "Route B\ntrigger_good = []\nnegative_inversion = []\nblocked-step audit:\n100/100 task_pressure\nin both packs",
+        "Route B\nNo trigger-good cases\nNo negative inversion\nBlocked-step audit:\n100/100 task pressure\nin both packs",
         (1360, 272),
         315,
         font(28, True),
