@@ -1,4 +1,4 @@
-# CS505 Playground Final Report Artifacts
+# CS505 Playground Final Report
 
 This repository contains the public code and curated artifacts for the CS505 final report:
 
