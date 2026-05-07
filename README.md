@@ -6,12 +6,12 @@ This repository contains the public code and curated artifacts for the CS505 fin
 
 ## Contents
 
-- `agent/`, `data/`, `eval/`, `tests/`: source code used for task generation, live runs, receipts, diagnosis, and report metrics.
+- `agent/`, `data/`, `env/`, `eval/`, `tests/`: source code used for task generation, the ToyTextMDP environment, live runs, receipts, diagnosis, and report metrics.
 - `report/`: ACL LaTeX source, compiled PDF, bibliography, ACL style files, deterministic figure generator, and generated figures.
 - `artifacts/`: curated evidence artifacts for the reported seed-11 and v4 seed-7 batteries, including summaries, preflight summaries, receipts, diagnosis reports, blocked-step audits, task packs, and SHA files where applicable.
 - `requirements.txt`: Python dependencies used by the project.
 
-The repository intentionally excludes unrelated local workspace folders, local Codex state, environment folders, broad raw live JSONL traces, and unrelated course projects. The included artifacts are the public subset needed to inspect the paper's reported claims without publishing the full local workspace.
+The repository intentionally excludes unrelated local workspace folders, local Codex state, broad raw live JSONL traces, and unrelated course projects. The included artifacts are the public subset needed to inspect the paper's reported claims without publishing the full local workspace.
 
 ## Main Report
 
