@@ -106,7 +106,7 @@ def _sha256(path: Path) -> str:
 def collect_run_receipt(
     *,
     run_root: Path,
-    owner: str = "Codex",
+    owner: str = "runner",
     lane: str = "discovery",
     shell_timeout_observed: bool = False,
 ) -> dict[str, Any]:
@@ -282,7 +282,7 @@ def render_receipt_markdown(receipt: dict[str, Any]) -> str:
         "",
         f"- run_name: {receipt['run_name']}",
         f"- date: {receipt.get('date', '')}",
-        f"- owner: {receipt.get('owner', 'Codex')}",
+        f"- owner: {receipt.get('owner', 'runner')}",
         f"- run_completed: {_bool_text(bool(receipt.get('run_completed')))}",
         f"- jsonl_integrity: {receipt['jsonl_integrity']}",
         f"- task_id_pairing: {receipt['task_id_pairing']}",
@@ -306,7 +306,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Validate a run root and emit a post-run receipt.")
     parser.add_argument("--run-root", type=Path, required=True)
     parser.add_argument("--out", type=Path, default=None)
-    parser.add_argument("--owner", type=str, default="Codex")
+    parser.add_argument("--owner", type=str, default="runner")
     parser.add_argument("--lane", type=str, default="discovery")
     parser.add_argument("--shell-timeout-observed", action="store_true")
     return parser.parse_args()

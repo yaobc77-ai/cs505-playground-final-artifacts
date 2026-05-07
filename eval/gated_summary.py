@@ -325,7 +325,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--action-type", type=str, required=True)
     parser.add_argument("--action-target", type=str, required=True)
     parser.add_argument("--lane", type=str, default="discovery")
-    parser.add_argument("--owner", type=str, default="Codex")
+    parser.add_argument("--owner", type=str, default="runner")
     parser.add_argument("--run-context", type=str, default=None)
     return parser.parse_args()
 

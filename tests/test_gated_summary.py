@@ -106,7 +106,7 @@ class GatedSummaryTests(unittest.TestCase):
                 action_type="implementation_change",
                 action_target="candidate_shape_normalization_and_exposure",
                 lane="discovery",
-                owner="Codex",
+                owner="runner",
                 run_context="candidate_shape_normalization_and_exposure_20260415",
             )
             ordered_sections = [
@@ -134,7 +134,7 @@ class GatedSummaryTests(unittest.TestCase):
                 action_type="implementation_change",
                 action_target="candidate_shape_normalization_and_exposure",
                 lane="discovery",
-                owner="Codex",
+                owner="runner",
                 run_context="candidate_shape_normalization_and_exposure_20260415",
             )
             self.assertFalse(meta["execution_allowed"])
@@ -194,7 +194,7 @@ class GatedSummaryTests(unittest.TestCase):
                 action_type="implementation_change",
                 action_target="candidate_shape_normalization_and_exposure",
                 lane="discovery",
-                owner="Codex",
+                owner="runner",
                 run_context="candidate_shape_normalization_and_exposure_20260415",
             )
             self.assertTrue(meta["execution_allowed"])
